@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     int i, rand_num, max_num, total_num;
 
-    FILE *output = fopen("numbers.txt", "w");
+    //FILE *output = fopen("numbers.txt", "w");
     
     if (argc != 3)
     {
@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
     {
         rand_num = rand() % max_num;
         printf("%d\n",rand_num);
-        fprintf(output, "%d\n", rand_num);   
+        //fprintf(output, "%d\n", rand_num);   
     }
 
-    fclose(output);
+    //fclose(output);
 
     return 0;
 }
