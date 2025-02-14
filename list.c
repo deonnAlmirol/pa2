@@ -284,8 +284,12 @@ struct node* add_item_sorted(struct node *sorted_head, int data)
     }
     if (data < node_ptr->data) {
         new_node->next = node_ptr;
-        tmp->next = new_node;
-        node_ptr = tmp;
+        if (tmp != NULL) {
+            tmp->next = new_node;
+            node_ptr = tmp;
+        } else {
+            sorted_head = new_node;
+        }
         return sorted_head;
     }
     node_ptr->next = new_node;
