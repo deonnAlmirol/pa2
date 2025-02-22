@@ -57,6 +57,7 @@ int main(int argc, char *argv[])
         num_array[num_ints] = current_num;
         num_ints++;
     }
+    fclose(file);
 
     /* Print the array */
     printf("Original Array:\n");
@@ -131,6 +132,7 @@ int main(int argc, char *argv[])
     for (f_index = 0; f_index < num_ints; f_index++) {
         fprintf(result_file, "%d\n", sorted_array[f_index]);
     }
+    fclose(result_file);
 
     /* Print out the number of integers written to the file */
     printf("Wrote %d numbers to sorted_numbers.txt\n", f_index);
