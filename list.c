@@ -78,6 +78,7 @@ int main(int argc, char *argv[])
     *  Search the linked list for the number and print out the result as shown in the specs.
     *  Stop prompting when the user enters 'q' (just the character q without the single quotes).
     */
+   /*
     char input[10];
     //int run = 1;
     for (;;) {
@@ -96,6 +97,7 @@ int main(int argc, char *argv[])
 
         memset(input, 0, sizeof(input));
     }
+    */
 
     /* Create a sorted list(in ascending order) from the unsorted list */
     struct node* linked_list_sorted = create_sorted_list(array_linked_list);
