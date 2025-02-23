@@ -205,6 +205,7 @@ int search_list(struct node *head, int element)
     while (head != NULL) {
         if (head->data == element) {
             result = position;
+            return result;
         }
 
         head = head->next;
@@ -220,6 +221,7 @@ int search_array(int integers[], int numints, int element)
     for (int i = 0; i < numints; i++) {
         if (integers[i] == element) {
             result = i;
+            return result;
         }
     }
 
