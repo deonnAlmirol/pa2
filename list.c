@@ -157,6 +157,10 @@ int main(int argc, char *argv[])
     }
 
     free (num_array);
+
+    //struct node* test = NULL;
+    //test = add_item_sorted(test, 15);
+    //free(test);
 }
 
 struct node* create_list(int intarray[], int len)
@@ -268,6 +272,8 @@ struct node* add_item_sorted(struct node *sorted_head, int data)
     new_node ->data = data;
     new_node ->next = NULL;
 
+
+    if (node_ptr != NULL) {
     while (node_ptr->next != NULL) {
         if (data > node_ptr->data) {
             tmp = node_ptr;
@@ -298,6 +304,9 @@ struct node* add_item_sorted(struct node *sorted_head, int data)
     }
     node_ptr->next = new_node;
     //node_ptr->next = new_node;
+    } else {
+        return new_node;
+    }
 
     return sorted_head;
 }
