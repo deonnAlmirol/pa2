@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     *  Stop prompting when the user enters 'q' (just the character q without the single quotes).
     */
     char input[10];
-    int run = 1;
+    //int run = 1;
     for (;;) {
         printf("Enter number: ");
         scanf("%s", input);
@@ -256,7 +256,7 @@ struct node* create_sorted_list(struct node *head)
 
 struct node* add_item_sorted(struct node *sorted_head, int data)
 { 
-    int previous_int = -1;
+    //int previous_int = -1;
     struct node* node_ptr = sorted_head;
     struct node* new_node = (struct node*) malloc(sizeof(struct node));
     if (new_node == NULL) {
