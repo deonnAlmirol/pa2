@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     int current_num;
     int num_ints = 0;
 
-    while(fscanf(file, "%d", &current_num) != EOF) {
+    while(fscanf(file, "%d", &current_num) != EOF && num_ints < MAX_INTS) {
         num_array[num_ints] = current_num;
         num_ints++;
     }
